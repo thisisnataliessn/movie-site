@@ -15,7 +15,13 @@ a {
     font-size: 14px;
 }
 
+.container {
+    max-width: 540px;
+    margin: auto;
+}
+
 header {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
@@ -86,18 +92,18 @@ header {
 .card {
     display: grid;
     grid-template-columns: auto auto;
-    width: 350px;
+    grid-gap: 16px;
+    border: 1px black solid;
 }
 
-.card-img-left {
-    background-size: cover;
-    overflow: hidden;
-    height: 174px;
-    width: 285.57px;
-}
+
 
 /*tablet*/
 @media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+
     .search-bar {
         display: inline-block;
         width: 50%;
@@ -119,8 +125,12 @@ header {
 
 /*desktop*/
 @media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+
     .search-bar {
-        width: 70%
+        width: 65%
     }
 
 
@@ -145,11 +155,19 @@ header {
         grid-row: 1;
         margin-top: 0;
     }
+
     .lists {
         margin-top: 0;
         display: grid;
-        grid-template-columns: repeat(3,auto);
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 24px;
         margin-left: 0;
     }
 
+}
+
+@media (min-width: 1200px) {
+    container {
+        max-width: 1140px;
+    }
 }
