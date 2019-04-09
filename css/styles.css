@@ -2,25 +2,72 @@
     box-sizing: border-box;
 }
 
+body {
+    line-height: 1.5;
+}
+
+img {
+    max-height: auto;
+    width: 100%;
+}
+
+a {
+    font-size: 14px;
+}
+
 header {
     justify-content: space-between;
     align-items: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    position: sticky;
 }
 
-.search {
-    width: 700px;
+.search-bar {
+    display: none;
+}
+
+.search-icon {
+    height: 28px;
+    width: 28px;
+}
+
+
+.basics {
+    margin-bottom: 40px;
+}
+
+.basics h1 {
+    font-size: 54px;
+}
+
+.basics h2 {
+    font-size: 20px;
+    font-weight: 300;
+    display: inline;
 }
 
 .images-trailer-container {
     display: grid;
-    grid-template-columns: 300px auto;
-    grid-gap: 72px;
+    grid-template-rows: 300px auto;
+    grid-gap: 40px;
+    margin-bottom: 40px;
 }
+
+.poster {
+    display: none;
+}
+
 .trailer-container {
+    grid-row: 1;
     position: relative;
     overflow: hidden;
     padding-top: 56.25%;
-    grid-column: 2;
+}
+
+.trailer-links {
+    grid-row: 2;
+    margin-top: -40px;
 }
 
 .trailer {
@@ -30,4 +77,79 @@ header {
     width: 100%;
     height: 100%;
     border: 0;
+}
+
+.lists {
+    margin-left: 25%;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 350px;
+}
+
+.card-img-left {
+    background-size: cover;
+    overflow: hidden;
+    height: 174px;
+    width: 285.57px;
+}
+
+/*tablet*/
+@media (min-width: 768px) {
+    .search-bar {
+        display: inline-block;
+        width: 50%;
+    }
+
+    .basics h1 {
+        display: inline;
+    }
+
+    .poster {
+        margin-top: 80px;
+    }
+
+    .lists {
+        margin-top: 80px;
+    }
+
+}
+
+/*desktop*/
+@media (min-width: 992px) {
+    .search-bar {
+        width: 70%
+    }
+
+
+    .images-trailer-container {
+        display: grid;
+        grid-template-columns: 300px auto;
+        grid-template-rows: auto;
+        grid-gap: 40px;
+    }
+
+    .trailer-container {
+        grid-column: 2;
+    }
+
+    .trailer-links {
+        grid-column: 2;
+    }
+
+    .poster {
+        display: block;
+        grid-column: 1;
+        grid-row: 1;
+        margin-top: 0;
+    }
+    .lists {
+        margin-top: 0;
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        margin-left: 0;
+    }
+
 }
