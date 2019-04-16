@@ -1,0 +1,1 @@
+This was a "take-home" assignment. I performed user research, designed a mockup, and coded this up in under 8 hours.
